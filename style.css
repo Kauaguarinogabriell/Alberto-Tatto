@@ -3,213 +3,170 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
     color: #ADBAC7;
 }
-html, body{
-    display: flex;
-    flex-direction: column;
-    place-content: center;
+html{
     min-height: 100vh;
     font-family: 'Roboto', sans-serif;
     background: #1c2128;
 }
+body{
+    height: 100%;
+}
 img{
     display: block;
-    object-fit: cover;
-    border-radius: 5px;
-    max-width: 100%;
     width: 100%;
-    object-position: center;
+    border-radius: 5px;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+    gap: 2rem;
+    margin: 0 auto;
+}
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.set-size{
+    max-width: 1500px;
+    padding: 1rem 2rem;
+}
+.set-margin{
+    margin-top: 3rem;
+    margin-bottom: 2rem;
 }
 h1{
-    text-align: center;
     font-size: 3rem;
     letter-spacing: .1rem;
     font-weight: 300;
     border-bottom: 1.5px solid #ADBAC7;
-    margin: 1.5rem 0rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 400;
+    line-height: 100%;
 }
-[class^=container]{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1400px;
-    width: 95%;
-}
-[class$=bg]{
-    display: flex;
-    place-content: center;
-}
-ul{
-    display: flex;
-    gap: 2rem;
-}
-.container-header{
-    padding: 1rem;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-}
-.nav-header{
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.logo-marca{
+.logo{
     width: 200px;
 }
-.logo-main{
+.logo-show-task{
     width: 45%;
 }
-.tatuador-img{
+.foto-show-task{
+    width: 100%;
+    object-fit: cover;
     object-position: center;
-    width: 55%;
-    height: 80vh;
-    border-radius: 5px;
+    height: 75vh;
 }
-.galeria-bg{
-    padding: 5rem 0rem;
-}
-.container-galeria{
+.galeria, .cuidados, .texts, .perguntas{
     flex-direction: column;
 }
-.imagens-galeria{
+.imagens{
     flex-wrap: wrap;
-    max-width: 100%;
-    width: 100%;
+    gap: 1rem;
     justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
-    flex: 1;
 }
-.imagens-galeria > li > img{
-    max-width: 430px;
-    width: 100%;
+.imagens img{
+    width: 48%;
     height: 100vh;
+    object-fit: cover;
+    object-position: fill;
 }
-.sobre-bg{
-    padding-top: 4rem;
+.sobre{
+    align-items: flex-start;
+    gap: 1.5rem;
 }
-.diploma{
+.texts p{
+    padding: .5rem 0rem .5rem 0rem;
+}
+.foto-sobre{
     width: 50%;
 }
-.container-sobre{
-    gap: 2rem;
-}
-.texts-sobre{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100%;
-    width: 50%;
-}
-#sobre{
-    padding-top: 0;
-    margin-top: 0;
-}
-.texts-sobre p{
-    margin-bottom: 1rem;
-    font-size: 18px;
-}
-.cuidados-bg{
-    padding: 2rem 0rem;
-}
-.container-cuidados, .container-perguntas{
-    flex-direction: column;
-}
-.h1-cuidados{
-    text-transform: uppercase;
-    font-weight: bold;
-    max-width: 17ch;
+.title-cuidados{
+    max-width: 15ch;
 }
 .card-container{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
 }
 .card{
-    background: #2d333b;
-    width: 40%;
+    width: 100%;
+    background-color: #2d333b;
     padding: 1rem;
     border-radius: 5px;
+    height: 100%;
 }
 .card h2{
-    padding-bottom: .5rem;
+    margin-bottom: .5rem;
 }
 .card2{
     width: 100%;
 }
-.contato-bg{
-    padding: 4rem 0rem;
-}
-.container-contato{
+.footer{
+    gap: 1rem;
     justify-content: space-around;
-}
-.texts-contato p{
-    padding-bottom: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: left;
 }
 .icon{
     width: 20px;
     display: inline-block;
     margin-right: .5rem;
 }
+footer p{
+    padding-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
 .link:hover{
     color: rgb(192, 165, 14);
 }
-
-@media (max-width: 768px){
-    .nav-header{
-        gap: .7rem;
+@media(max-width: 800px){
+    .ul-nav-menu{
+        gap: .5rem;
     }
-    .nav-header li{
-        background: #2d333b;
+    .ul-nav-menu a{
+        background-color: #2d333b;
         padding: .5rem .8rem;
         border-radius: 5px;
     }
-    .container-contato, .container-sobre, .container-main{
+    .images img{
+        object-position: center;
+        object-fit: cover;
+    }
+    .sobre{
         flex-direction: column;
     }
-    .texts-sobre{
+    .foto-sobre{
         width: 100%;
     }
-    .diploma{
-        width: 100%;
-    }
-    [class^=container]{
-        max-width: 1400px;
-        width: 85%;
-    }
-    .tatuador-img{
-        width: 100%;
-    }
-    .imagens-galeria > li > img{
-        max-width: 430px;
-        width: 100%;
-        height: 100vh;
-    }
-    .card{
-        width: 100%;
-    }
-    .texts-contato{
-        padding-bottom: 1rem;
-    }
-    .map{
-        width: 80%;
+    .footer{
+        justify-content: space-between;
     }
 }
-@media (max-width: 711px){
-    .container-header{
-        justify-content: center;
+@media(max-width: 600px){
+    header{
+        flex-direction: column;
+        gap: 1.5rem;
     }
-}
-@media (max-width: 448px){
-    .nav-header li{
-        width: 30%;
-        text-align: center;
+    .logo-show-task{
+        display: none;
+    }
+    .imagens, .show-task, footer{
+        flex-direction: column;
+    }
+    .imagens img, .card, .contato{
+        width: 100%;
+        height: 100%;
+        object-position: inherit;
+    }
+    .card-container{
+        grid-template-columns: auto;
+    }
+    iframe{
+        width: 100%;
     }
 }
